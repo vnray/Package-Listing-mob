@@ -1,20 +1,31 @@
+import { Link } from "react-router-dom";
+import data from "../Data/extended_location_data.json";
 
-import data from "../Data/extended_location_data.json"
-
-const Footer = ()=>{
-  
-    return(
-        <div>
-            <ul>
-        {Object.keys(data).map((state) => (
-          <li key={city.index}>
-            <h2>{state}</h2>
-            
-          </li>
-        ))}
-      </ul>
+const Footer = () => {
+  return (
+    <div className="footer-wrapper">
+      {/* {Object.keys(data).map((stateName) => (
+        <div key={stateName}>
+          <h2>{stateName}</h2>
         </div>
-    )
-}
+      ))} */}
+
+      <div className="alphbed-numbers-list">
+        <div className="left-area-lable">
+          <span>States</span>
+        </div>
+        <div className="right-area-lable">
+          <ul className="">
+            {Object.keys(data).map((stateName) => (
+              <li key={stateName}>
+                <Link to={`/state/${stateName}`}>{stateName}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;
