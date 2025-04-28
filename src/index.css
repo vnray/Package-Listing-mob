@@ -284,3 +284,6 @@
     font-size: 14px;
     line-height: 16px;
 }
+.button-wrapper .right-area-lable ul li{
+  padding: 0 5px;
+}
