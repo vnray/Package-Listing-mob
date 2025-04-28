@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer";
 
 const CityList = ({ data }) => {
@@ -13,8 +13,10 @@ const CityList = ({ data }) => {
       <div className="button-wrapper">
         <Footer />
       </div>
-      <h2>Cities in {stateName}</h2>
+      
 
+     <div className="content-wrapper">
+     <h2>Cities in {stateName}</h2>
       <table className="city-table table table-striped">
         <tbody>
           {Array.from({ length: rowCount }).map((_, rowIndex) => {
@@ -22,22 +24,25 @@ const CityList = ({ data }) => {
             const rowCities = cities.slice(startIdx, startIdx + 4);
 
             return (
-              <tr key={rowIndex}>
+              <tr key={rowIndex} className="table-width">
                 {rowCities.map((city) => (
+                 
                   <td key={city.id} className="city-cell">
-                    <div className="city-name">{city.name}</div>
+                    <Link to={`/state/${stateName}/${city.name}`} className="city-name">{city.name}</Link>
                   </td>
+                 
                 ))}
                 {/* Fill empty cells if needed */}
-                {Array.from({ length: 4 - rowCities.length }).map((_, i) => (
+                {/* {Array.from({ length: 4 - rowCities.length }).map((_, i) => (
                   <td key={`empty-${i}`} className="empty-cell"></td>
-                ))}
+                ))} */}
+       
               </tr>
             );
           })}
         </tbody>
       </table>
-
+</div>
       {/* <Link to="/" className="back-link">← Back to States</Link> */}
     </div>
   );

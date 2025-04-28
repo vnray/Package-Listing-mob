@@ -6,6 +6,9 @@ import CityList from "./components/CityList";
 import data from "./Data/extended_location_data.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import CityDetail from "./components/CityDetails";
+
+
 
 function App() {
   return (
@@ -17,7 +20,11 @@ function App() {
             <Route
               path="/state/:stateName"
               element={<CityList data={data} />}
-            />
+              />
+            
+            <Route path="/state/:stateName/:cityName" element={<CityDetail data={data} />} />
+
+          
           </Routes>
         </Layout>
       </Router>

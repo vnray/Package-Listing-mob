@@ -2,7 +2,8 @@
 
 const Header = ()=>{
     return(
-        <h2>header section</h2>
+        // <h2>header section</h2>
+        <></>
     )
 }
 
