@@ -16,7 +16,7 @@ function App() {
       <Router basename="/Package-Listing">
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} /> || <Route path="Package-Listing" element={<Home/>}/>
             <Route
               path="/state/:stateName"
               element={<CityList data={data} />}
