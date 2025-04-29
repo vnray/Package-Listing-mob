@@ -13,7 +13,7 @@ import CityDetail from "./components/CityDetails";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/Package-Listing">
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
