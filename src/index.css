@@ -76,8 +76,8 @@
   display: flex;
   margin: 0;
   padding: 0;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  /* -ms-flex-wrap: wrap;
+  flex-wrap: wrap; */
   /* justify-content: space-between; */
   align-items: center;
 }
@@ -286,4 +286,95 @@
 }
 .button-wrapper .right-area-lable ul li{
   padding: 0 5px;
+}
+
+
+/* Applies only to screens 600px wide or less */
+@media (max-width: 600px) {
+  .title-wrapper .title{
+    padding: 10px 5px 5px;
+    margin: 0;
+    background: #f5f5f5;
+    width: 100%;
+  }
+  .title-wrapper img{
+    max-width: 600px;
+    width: 100%;
+  }
+  .sub-title-wrapper{
+    padding: 0 5px;
+  }
+ .right-area-lable ul{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   padding: 0;
+   margin-bottom: 10px;
+ }
+ .alphbed-numbers-list .right-area-lable ul li a {
+  width: auto;
+}
+.footer-wrapper {
+  padding: 0 10px;
+}
+.alphbed-numbers-list .right-area-lable ul{
+  position: static;
+}
+.button-wrapper .right-area-lable ul li{
+  padding: 0;
+}
+.button-wrapper .right-area-lable ul{
+  justify-content: space-between;
+}
+.alphbed-numbers-list .left-area-lable{
+  padding: 14px 0;
+}
+.content-wrapper{
+  padding: 0 5px;
+}
+.card-wrapper img {
+  width: 100%;
+  max-height: 250px;
+}
+.city-detail h2 {
+  background-image: url(https://img.traveltriangle.com/apac/attachments/pictures/843471/original/himachal-family-tour-packages-g.jpg?tr=w-1366,h-305);
+  max-height: 180px;
+  
+}
+.table-width .city-cell a{
+  font-size: 13px;
+}
+}
+
+.footer-wrapper{
+  margin-bottom: 50px;
+}
+
+.scroll-container-two-line {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 2 * 180px; /* Adjust based on card height */
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  cursor: grab;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-container-two-line::-webkit-scrollbar {
+  display: none;
+}
+
+.card-two-line {
+  min-width: 200px;
+  height: 150px;
+  flex: 0 0 auto;
+  background-color: #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  box-sizing: border-box;
+  user-select: none;
 }
