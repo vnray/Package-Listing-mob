@@ -2,6 +2,7 @@
 .footer-wrapper {
   background: rgb(55, 19, 91);
   padding: 0 20px;
+  padding-bottom: 30px;
 }
 
 .alphbed-numbers-list {
@@ -18,14 +19,12 @@
   flex-direction: column
 }
 
-.alphbed-numbers-list .left-area-lable {
-  padding-bottom: 16px
-}
 
 .alphbed-numbers-list .right-area-lable ul {
   position: relative;
   left: -16px;
-  row-gap: 16px
+  row-gap: 16px;
+  left: 0;
 }
 
 .alphbed-numbers-list .right-area-lable ul li a {
@@ -47,13 +46,9 @@
 }
 
 .alphbed-numbers-list .left-area-lable {
-  padding-bottom: 16px
+  padding-bottom: 0px;
 }
 
-.alphbed-numbers-list .right-area-lable ul {
-  position: relative;
-  left: -16px
-}
 .button-wrapper .left-area-lable span {
   
   font-size: 25px;
@@ -75,10 +70,8 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0;
-  /* -ms-flex-wrap: wrap;
-  flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  gap: 5px;
+  padding: 20px 0;
   align-items: center;
 }
 
@@ -88,7 +81,7 @@
 }
 
 .right-area-lable ul a {
-  color: #c6c6c6;
+  color: #000;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -128,16 +121,19 @@
   }
 
 }
-
+.button-wrapper .right-area-lable ul{
+  flex-wrap: wrap;
+}
 .button-wrapper .right-area-lable ul li a {
   width: auto;
-  border-radius: 24%;
-  padding: 13px;
+  border-radius: 25px;
   border: 1px solid #fff;
   border: 1px solid hsla(0, 0%, 42%, .5);
   background: #fff;
   color: #43165c;
   font-size: 15px;
+  min-width: 130px;
+  padding: 15px 0;
 }
 
 .button-wrapper .alphbed-numbers-list,
@@ -252,8 +248,8 @@
   padding-right: 8px;
 }
 .card-wrapper{
-  max-width: 900px;
-  width: 100%;
+  /* max-width: 900px; */
+  width: 75%;
   padding: 8px;
   border: 1px solid #d4d4d4;
   margin: 0 auto;
@@ -262,12 +258,14 @@
 
 .card-wrapper img{
   width: 100%;
+  height: 100%;
 }
 
-.card-title {
-  display: flex;
+.card-title h3 {
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+  font-size: 18px;
 }
 
 .btn-wrapper{
@@ -354,7 +352,6 @@
 .scroll-container-two-line {
   display: flex;
   flex-wrap: wrap;
-  max-height: 2 * 180px; /* Adjust based on card height */
   overflow-x: auto;
   gap: 1rem;
   scroll-behavior: smooth;
@@ -369,12 +366,44 @@
 }
 
 .card-two-line {
-  min-width: 200px;
-  height: 150px;
+  /* min-width: 200px;
+  height: 150px; */
   flex: 0 0 auto;
   background-color: #eee;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 5px;
   box-sizing: border-box;
   user-select: none;
+  min-width: 100px;
+}
+
+.city-wrapper{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+.city-cell{
+  max-width: 49%;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid darkgray;
+  margin-bottom: 8px;
+  padding: 12px 0;
+}
+.city-cell a{
+  text-decoration: none;
+  color: #000;
+}
+.city-cell .accord h2{
+  font-size:22px;
+}
+.tour-packages h3, .family-packages h3{
+  font-size: 18px;
+}
+.tour-packages h4, .family-packages h4{
+  font-size: 15px;
 }
