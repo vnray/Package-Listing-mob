@@ -8,7 +8,8 @@ const CityList = ({ data }) => {
   const { stateName } = useParams();
   const cities = data[stateName] || [];
   const [openCity, setOpenCity] = useState(null)
-
+  const [limit, setLimit] = useState(9);
+ 
  console.log(himanchal.data);
 
  const handleAccordionToggle = (cityName) => {
@@ -28,9 +29,9 @@ const CityList = ({ data }) => {
      <div className="content-wrapper">
      <h1>Cities in {stateName}</h1>
               <div className="city-wrapper">
-                {cities.map((city) => (
+                {cities.map((city, index) => (
                  
-                  <div key={city.id} className="city-cell" style={{ maxWidth: openCity === city.name ? "100%" : "48%" }}>
+                  <div key={city.id} className="city-cell" style={{ maxWidth: openCity === city.name ? "100%" : "30%", order: (index + 1) % 2 !== 0 ? 2 : 1, }} >
                     
                     <div className="accord" onClick={() => handleAccordionToggle(city.name)}
                           style={{ cursor: "pointer", fontWeight: "bold" }}>
@@ -41,18 +42,27 @@ const CityList = ({ data }) => {
                             {/* Example details — you can show actual data */}
                             <div className="tour-packages">
                               <h3>{city.name} Tour Packages</h3>
-                              <div>
-                              <h4>All {city.name} packages</h4>
+                              <div className="all-tour-packages">
+                                {himanchal.data.packages.slice(0, limit).map((pack)=>{
+                                    return <h4 key={pack.id}>{pack.name.substring(0, 35)}...</h4>
+                                })}
+                                <div className="btn-show">
+                                {limit ? (<button onClick={() => setLimit(limit.length)}>Show More</button>) : (<button onClick={() => setLimit(12)}>Show less</button>)}
+                                </div>
                               </div>
                             </div>
                             <div className="family-packages">
                               <h3>{city.name} Family Packages</h3>
-                              <div>
-                              <h4>All {city.name} packages</h4>
+                              <div className="all-family-packages">
+                              {himanchal.data.packages.slice(0, limit).map((pack)=>{
+                                    return <h4 key={pack.id}>{pack.name.substring(0, 35)}...</h4>
+                                })}
+                                <div className="btn-show">
+                                {limit ? (<button onClick={() => setLimit(limit.length)}>Show More</button>) : (<button onClick={() => setLimit(9)}>Show less</button>)}
+                                </div>
                               </div>
                             </div>
-                            <p>Population: {city.population || "N/A"}</p>
-                            <p>Famous for: {city.famous_for || "N/A"}</p>
+                    
 
                             {/* Link to city page */}
                             <Link to={`/state/${stateName}/${city.name}`}>Explore Packages</Link>

@@ -150,11 +150,16 @@
   align-items: center;
   color: #fff;
 }
-
+.button-wrapper .footer-wrapper{
+  margin: 0;
+}
 .button-wrapper .right-area-lable ul li a:hover{
   background: #5a298b;
   border-color: #5a298b;
   color: #fff;
+}
+.button-wrapper .card-two-line{
+  background: none;
 }
 
 .table-width .city-cell a{
@@ -164,7 +169,7 @@
 }
 
 .content-wrapper{
-  padding: 0 40px;
+  padding: 0 10px;
 }
 
 .card-title{
@@ -286,65 +291,6 @@
   padding: 0 5px;
 }
 
-
-/* Applies only to screens 600px wide or less */
-@media (max-width: 600px) {
-  .title-wrapper .title{
-    padding: 10px 5px 5px;
-    margin: 0;
-    background: #f5f5f5;
-    width: 100%;
-  }
-  .title-wrapper img{
-    max-width: 600px;
-    width: 100%;
-  }
-  .sub-title-wrapper{
-    padding: 0 5px;
-  }
- .right-area-lable ul{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   align-items: center;
-   padding: 0;
-   margin-bottom: 10px;
- }
- .alphbed-numbers-list .right-area-lable ul li a {
-  width: auto;
-}
-.footer-wrapper {
-  padding: 0 10px;
-}
-.alphbed-numbers-list .right-area-lable ul{
-  position: static;
-}
-.button-wrapper .right-area-lable ul li{
-  padding: 0;
-}
-.button-wrapper .right-area-lable ul{
-  justify-content: space-between;
-}
-.alphbed-numbers-list .left-area-lable{
-  padding: 14px 0;
-}
-.content-wrapper{
-  padding: 0 5px;
-}
-.card-wrapper img {
-  width: 100%;
-  max-height: 250px;
-}
-.city-detail h2 {
-  background-image: url(https://img.traveltriangle.com/apac/attachments/pictures/843471/original/himachal-family-tour-packages-g.jpg?tr=w-1366,h-305);
-  max-height: 180px;
-  
-}
-.table-width .city-cell a{
-  font-size: 13px;
-}
-}
-
 .footer-wrapper{
   margin-bottom: 50px;
 }
@@ -376,7 +322,9 @@
   user-select: none;
   min-width: 100px;
 }
-
+.accordion-body{
+  border-radius: 20px;
+}
 .city-wrapper{
   display: flex;
     flex-wrap: wrap;
@@ -386,13 +334,12 @@
     gap: 8px;
 }
 .city-cell{
-  max-width: 49%;
+  min-width: 30%;
   width: 100%;
   text-align: center;
-  border-radius: 15px;
-  border: 1px solid darkgray;
+  border-radius: 20px;
+  border: 1px solid #20a397;
   margin-bottom: 8px;
-  padding: 12px 0;
 }
 .city-cell a{
   text-decoration: none;
@@ -400,10 +347,146 @@
 }
 .city-cell .accord h2{
   font-size:22px;
+  margin: 0;
+  padding: 5px 0;
+  background: #f8fffe;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+}
+.city-cell .accord h2:hover {
+  box-shadow: 0px 5px 9px rgba(0, 123, 255, 0.5);
+  cursor: pointer;
 }
 .tour-packages h3, .family-packages h3{
   font-size: 18px;
+  margin-bottom: 14px;
+  background: #20a397;
+  color: #fff;
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 20px;
 }
 .tour-packages h4, .family-packages h4{
   font-size: 15px;
+}
+.accordion-body a{
+  padding: 9px 20px;
+  background-color: #fe5246;
+  border: 0;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.all-tour-packages, .all-family-packages{
+  display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.all-tour-packages h4, .all-family-packages h4{
+  border-radius: 20px;
+  text-align: center;
+  color: #3e3e3e;
+  font-size: 14px;
+  height: 32px;
+  line-height: 20px;
+  padding: 6px 15px;
+  display: inline-block;
+  align-items: center;
+  border: 1px solid #20a397;
+  min-width: 280px;
+  background: #fff;
+  cursor: pointer;
+}
+.all-tour-packages h4:hover, .all-family-packages h4:hover{
+  color: #fff;
+    background-color: #20a397;
+}
+.btn-show{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+.btn-show button{
+  padding: 2px 11px;
+    background-color: #fe5246;
+    border: 0;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+/* Applies only to screens 600px wide or less */
+@media (max-width: 600px) {
+  .title-wrapper .title{
+    padding: 10px 5px 5px;
+    margin: 0;
+    background: #f5f5f5;
+    width: 100%;
+  }
+  .title-wrapper img{
+    max-width: 600px;
+    width: 100%;
+  }
+  .sub-title-wrapper{
+    padding: 0 5px;
+  }
+ .right-area-lable ul{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 0;
+   margin-bottom: 10px;
+ }
+ .alphbed-numbers-list .right-area-lable ul li a {
+  width: auto;
+}
+.footer-wrapper {
+  padding: 0 10px;
+}
+.alphbed-numbers-list .right-area-lable ul{
+  position: static;
+}
+.button-wrapper .right-area-lable ul li{
+  padding: 0;
+}
+.button-wrapper .right-area-lable ul li a{
+  min-width: 114px;
+}
+.button-wrapper .right-area-lable ul{
+  column-gap: 3px;
+}
+.alphbed-numbers-list .left-area-lable{
+  padding: 14px 0;
+}
+.content-wrapper{
+  padding: 0 5px;
+}
+.card-wrapper img {
+  width: 100%;
+  max-height: 250px;
+}
+.city-detail h2 {
+  background-image: url(https://img.traveltriangle.com/apac/attachments/pictures/843471/original/himachal-family-tour-packages-g.jpg?tr=w-1366,h-305);
+  max-height: 180px;
+  
+}
+.table-width .city-cell a{
+  font-size: 13px;
+}
+.all-tour-packages, .all-family-packages {
+  justify-content: center !important;
+}
+.card-wrapper{
+  width: 100%;
+}
+.city-cell{
+  min-width: 48% !important;
+  max-width: 100% !important;
+}
+.city-cell .accord h2{
+  font-size: 21px;
+}
 }
