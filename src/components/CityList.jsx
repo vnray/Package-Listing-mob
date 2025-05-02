@@ -10,7 +10,7 @@ const CityList = ({ data }) => {
   const [openCity, setOpenCity] = useState(null)
   const [limit, setLimit] = useState(9);
  
- console.log(himanchal.data);
+ console.log(cities);
 
  const handleAccordionToggle = (cityName) => {
   // If clicked city is already open, close it

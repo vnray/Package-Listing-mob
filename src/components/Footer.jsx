@@ -51,7 +51,7 @@ const Footer = () => {
           <ul className="">
             {Object.keys(data).map((stateName) => (
               <li key={stateName} className="card-two-line" >
-                <Link to={`/state/${stateName}`} statename={stateName}>{stateName}</Link>
+                <Link to={`/state/${stateName}`} >{stateName}</Link>
               </li>
             ))}
           </ul>

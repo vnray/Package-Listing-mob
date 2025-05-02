@@ -1,5 +1,5 @@
 {
-  "homepage": "https://vnray.github.io/Package-Listing",
+  "homepage": "https://vnray.github.io/Package-Listing-mob",
   "name": "package",
   "private": true,
   "version": "0.0.0",
@@ -19,7 +19,7 @@
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.2",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^3.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
