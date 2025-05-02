@@ -169,9 +169,12 @@
 }
 
 .content-wrapper{
-  padding: 0 10px;
+  padding: 0 20px;
 }
-
+.content-wrapper h1{
+  font-size: 48px;
+  font-weight: 900;
+}
 .card-title{
   display: flex;
   justify-content: space-between;
@@ -331,40 +334,67 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 8px;
 }
 .city-cell{
-  min-width: 30%;
+  min-width: 100%;
   width: 100%;
-  text-align: center;
-  border-radius: 20px;
-  border: 1px solid #20a397;
-  margin-bottom: 8px;
 }
 .city-cell a{
   text-decoration: none;
   color: #000;
 }
+.city-cell .accord{
+  cursor: pointer;
+    font-weight: bold;
+    margin: 40px 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accord-wrap{
+  border-bottom: 1px solid #e0e0e0;
+}
+.accord .icon{
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.accord .icon img{
+  width: 50%;
+}
 .city-cell .accord h2{
-  font-size:22px;
+  font-size: 32px;
+  font-weight: 900;
   margin: 0;
-  padding: 5px 0;
-  background: #f8fffe;
-    border-radius: 20px;
-    transition: box-shadow 0.3s ease;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.city-cell .accord span img{
+  width:24px;
+  height:24px;
 }
 .city-cell .accord h2:hover {
-  box-shadow: 0px 5px 9px rgba(0, 123, 255, 0.5);
+  /* box-shadow: 0px 5px 9px rgba(0, 123, 255, 0.5); */
   cursor: pointer;
 }
+.accordian-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .tour-packages h3, .family-packages h3{
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 14px;
-  background: #20a397;
-  color: #fff;
+  color: #000;
   display: inline-block;
-  padding: 6px 15px;
   border-radius: 20px;
+  opacity: 0.65;
+  font-weight: 700;
 }
 .tour-packages h4, .family-packages h4{
   font-size: 15px;
@@ -377,31 +407,24 @@
   border-radius: 8px;
 }
 
-.all-tour-packages, .all-family-packages{
+/* .all-tour-packages, .all-family-packages{
   display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
-}
+} */
 .all-tour-packages h4, .all-family-packages h4{
-  border-radius: 20px;
-  text-align: center;
-  color: #3e3e3e;
-  font-size: 14px;
-  height: 32px;
-  line-height: 20px;
-  padding: 6px 15px;
-  display: inline-block;
-  align-items: center;
-  border: 1px solid #20a397;
+  color: #0f3cc9;
+  font-size: 16px;
+  height: 24px;
   min-width: 280px;
-  background: #fff;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 .all-tour-packages h4:hover, .all-family-packages h4:hover{
-  color: #fff;
-    background-color: #20a397;
+  color: #0f3cc9;
+  text-decoration: underline;
 }
 .btn-show{
   display: flex;
@@ -416,6 +439,24 @@
     color: #fff;
     border-radius: 12px;
     font-size: 13px;
+}
+.btn-show{
+  display: none;
+}
+.pc-btn{
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.pc-btn button{
+  padding: 3px 16px;
+  background-color: #fe5246;
+  border: 0;
+  color: #fff;
+  border-radius: 18px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Applies only to screens 600px wide or less */
@@ -489,4 +530,14 @@
 .city-cell .accord h2{
   font-size: 21px;
 }
+.btn-show{
+  display: block;
+}
+.accordian-wrapper{
+  flex-wrap: wrap;
+}
+.all-tour-packages h4, .all-family-packages h4 {
+  min-height: 100%;
+}
+
 }
